@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IGr-fI-Rqb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Forecast-->
+        <scene sceneID="uy2-ut-tcD">
+            <objects>
+                <viewController storyboardIdentifier="ForecastViewController" id="IGr-fI-Rqb" customClass="ForecastViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rPE-YG-9VU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-iT-kDE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4LN-KI-l0W">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecastTableViewCell" rowHeight="80" id="gAQ-gV-Vpb" customClass="ForecastTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gAQ-gV-Vpb" id="2Gy-u1-ooL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOD-8t-3Z7">
+                                                    <rect key="frame" x="360" y="29.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qjJ-nI-h84">
+                                                    <rect key="frame" x="8" y="20" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="DNP-aH-GQf"/>
+                                                        <constraint firstAttribute="height" constant="40" id="EAO-cn-WPW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbn-Qm-nQU">
+                                                    <rect key="frame" x="56" y="29.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sOD-8t-3Z7" firstAttribute="trailing" secondItem="2Gy-u1-ooL" secondAttribute="trailingMargin" constant="8" id="6i6-e1-vto"/>
+                                                <constraint firstItem="sOD-8t-3Z7" firstAttribute="centerY" secondItem="2Gy-u1-ooL" secondAttribute="centerY" id="NY6-5Z-22X"/>
+                                                <constraint firstItem="hbn-Qm-nQU" firstAttribute="centerY" secondItem="2Gy-u1-ooL" secondAttribute="centerY" id="kHO-uB-HSt"/>
+                                                <constraint firstItem="qjJ-nI-h84" firstAttribute="leading" secondItem="2Gy-u1-ooL" secondAttribute="leading" constant="8" id="nnQ-N1-Sqd"/>
+                                                <constraint firstItem="hbn-Qm-nQU" firstAttribute="leading" secondItem="qjJ-nI-h84" secondAttribute="trailing" constant="8" symbolic="YES" id="oM5-vT-2RQ"/>
+                                                <constraint firstItem="qjJ-nI-h84" firstAttribute="centerY" secondItem="2Gy-u1-ooL" secondAttribute="centerY" id="reM-YR-Yw0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="sOD-8t-3Z7" id="V8r-9V-opP"/>
+                                            <outlet property="weatherIconImageView" destination="qjJ-nI-h84" id="9se-uf-dwm"/>
+                                            <outlet property="weatherTemperatureLabel" destination="hbn-Qm-nQU" id="aex-R7-x5m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9bv-xu-YKW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ui2-iT-kDE" secondAttribute="trailing" id="ANy-HD-Yha"/>
+                            <constraint firstAttribute="bottom" secondItem="ui2-iT-kDE" secondAttribute="bottom" id="BG3-aH-EU3"/>
+                            <constraint firstItem="ui2-iT-kDE" firstAttribute="top" secondItem="rPE-YG-9VU" secondAttribute="top" id="Eha-wV-wVl"/>
+                            <constraint firstItem="4LN-KI-l0W" firstAttribute="top" secondItem="9bv-xu-YKW" secondAttribute="top" id="MCr-Sa-HBy"/>
+                            <constraint firstItem="ui2-iT-kDE" firstAttribute="leading" secondItem="9bv-xu-YKW" secondAttribute="leading" id="dcC-vc-Dak"/>
+                            <constraint firstItem="9bv-xu-YKW" firstAttribute="bottom" secondItem="4LN-KI-l0W" secondAttribute="bottom" id="kah-dd-V6y"/>
+                            <constraint firstItem="9bv-xu-YKW" firstAttribute="trailing" secondItem="4LN-KI-l0W" secondAttribute="trailing" id="ucc-G1-xFo"/>
+                            <constraint firstItem="4LN-KI-l0W" firstAttribute="leading" secondItem="9bv-xu-YKW" secondAttribute="leading" id="vof-Vh-Uc2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="forecast_icon" id="0BB-Ld-R0x">
+                        <inset key="imageInsets" minX="9" minY="-1" maxX="9" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="1"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="forecastTableView" destination="4LN-KI-l0W" id="N2f-gx-15E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5i-gp-U0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background1" width="842" height="1694"/>
+        <image name="forecast_icon" width="50.5" height="50.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

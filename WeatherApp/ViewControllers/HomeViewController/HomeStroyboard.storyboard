@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0wg-0V-SaA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="fjG-09-yZF">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="0wg-0V-SaA" customClass="HomeViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vCe-ji-VPS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="6W9-VS-vHh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcY-Qm-fs3">
+                                <rect key="frame" x="207" y="52" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uka-Iy-9si">
+                                <rect key="frame" x="207" y="398" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eox-8G-oaf">
+                                <rect key="frame" x="182" y="68" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0c4-0O-8yj"/>
+                                    <constraint firstAttribute="height" constant="50" id="qt3-we-bGa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLh-Ws-rsj">
+                                <rect key="frame" x="207" y="134" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2T2-0A-TU0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uka-Iy-9si" firstAttribute="centerY" secondItem="vCe-ji-VPS" secondAttribute="centerY" constant="-50" id="2Qd-vB-MCb"/>
+                            <constraint firstItem="Eox-8G-oaf" firstAttribute="top" secondItem="WcY-Qm-fs3" secondAttribute="bottom" constant="16" id="DiZ-FL-6uS"/>
+                            <constraint firstItem="WcY-Qm-fs3" firstAttribute="top" secondItem="2T2-0A-TU0" secondAttribute="top" constant="8" id="HPs-tr-iJw"/>
+                            <constraint firstItem="tLh-Ws-rsj" firstAttribute="top" secondItem="Eox-8G-oaf" secondAttribute="bottom" constant="16" id="Ibb-QN-YaI"/>
+                            <constraint firstItem="6W9-VS-vHh" firstAttribute="leading" secondItem="2T2-0A-TU0" secondAttribute="leading" id="LyA-NW-wpY"/>
+                            <constraint firstItem="WcY-Qm-fs3" firstAttribute="centerX" secondItem="vCe-ji-VPS" secondAttribute="centerX" id="O1f-uB-vsB"/>
+                            <constraint firstItem="uka-Iy-9si" firstAttribute="centerX" secondItem="vCe-ji-VPS" secondAttribute="centerX" id="ZN4-KF-s1Z"/>
+                            <constraint firstItem="tLh-Ws-rsj" firstAttribute="centerX" secondItem="vCe-ji-VPS" secondAttribute="centerX" id="cao-wn-Mu4"/>
+                            <constraint firstAttribute="bottom" secondItem="6W9-VS-vHh" secondAttribute="bottom" id="gGp-Na-ad3"/>
+                            <constraint firstItem="6W9-VS-vHh" firstAttribute="top" secondItem="vCe-ji-VPS" secondAttribute="top" id="hNO-EP-cXN"/>
+                            <constraint firstItem="Eox-8G-oaf" firstAttribute="centerX" secondItem="vCe-ji-VPS" secondAttribute="centerX" id="iNo-pX-yH1"/>
+                            <constraint firstItem="2T2-0A-TU0" firstAttribute="trailing" secondItem="6W9-VS-vHh" secondAttribute="trailing" id="r1R-eU-kHw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="main_icon" id="ykT-sc-MZ7">
+                        <inset key="imageInsets" minX="9" minY="-33" maxX="9" maxY="0.0"/>
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="1"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="WcY-Qm-fs3" id="7C0-dg-CEh"/>
+                        <outlet property="temperaureLabel" destination="uka-Iy-9si" id="Dom-po-g32"/>
+                        <outlet property="weatherDescriptionLabel" destination="tLh-Ws-rsj" id="AF0-BD-W2g"/>
+                        <outlet property="weatherIconImageView" destination="Eox-8G-oaf" id="zJv-1K-OOh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2J-Gc-5Dx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318.84057971014494" y="148.66071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background1" width="842" height="1694"/>
+        <image name="main_icon" width="80.5" height="80.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

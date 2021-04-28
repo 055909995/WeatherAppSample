@@ -1,0 +1,9 @@
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "ESS-nj-qth"; */
+"ESS-nj-qth.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "Forecast"; ObjectID = "IIY-ta-bbD"; */
+"IIY-ta-bbD.title" = "Forecast";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "gNb-w5-gj8"; */
+"gNb-w5-gj8.title" = "Settings";

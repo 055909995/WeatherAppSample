@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5IE-ao-AMS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="RKw-5q-0Kx">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="5IE-ao-AMS" customClass="SettingsViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RqY-H2-GBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="xmm-Xc-PDm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hS-hy-qwB">
+                                <rect key="frame" x="0.0" y="367" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="fh6-oj-9xj"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kR-ND-kW7">
+                                <rect key="frame" x="130" y="52" width="154" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NBA-Ma-oIN"/>
+                                    <constraint firstAttribute="width" constant="154" id="OQc-pN-bTO"/>
+                                </constraints>
+                                <state key="normal" title="Sync city with location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="syncButtonTapped:" destination="5IE-ao-AMS" eventType="touchUpInside" id="GTz-EP-Prl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Jm-aS-IZU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3hS-hy-qwB" firstAttribute="centerY" secondItem="RqY-H2-GBJ" secondAttribute="centerY" id="3OG-xd-kfT"/>
+                            <constraint firstItem="3hS-hy-qwB" firstAttribute="leading" secondItem="8Jm-aS-IZU" secondAttribute="leading" id="7Uf-AJ-SB8"/>
+                            <constraint firstItem="7kR-ND-kW7" firstAttribute="centerX" secondItem="RqY-H2-GBJ" secondAttribute="centerX" id="ARf-2a-83E"/>
+                            <constraint firstItem="xmm-Xc-PDm" firstAttribute="trailing" secondItem="8Jm-aS-IZU" secondAttribute="trailing" id="LZo-wO-LF6"/>
+                            <constraint firstItem="xmm-Xc-PDm" firstAttribute="leading" secondItem="8Jm-aS-IZU" secondAttribute="leading" id="WkH-2d-4Nd"/>
+                            <constraint firstItem="3hS-hy-qwB" firstAttribute="centerX" secondItem="RqY-H2-GBJ" secondAttribute="centerX" id="XZ7-Pc-cDE"/>
+                            <constraint firstItem="xmm-Xc-PDm" firstAttribute="top" secondItem="RqY-H2-GBJ" secondAttribute="top" id="ZCW-fm-Zkx"/>
+                            <constraint firstItem="7kR-ND-kW7" firstAttribute="top" secondItem="8Jm-aS-IZU" secondAttribute="top" constant="8" id="afn-pZ-Tae"/>
+                            <constraint firstAttribute="bottom" secondItem="xmm-Xc-PDm" secondAttribute="bottom" id="eyw-aY-q3z"/>
+                            <constraint firstItem="3hS-hy-qwB" firstAttribute="trailing" secondItem="8Jm-aS-IZU" secondAttribute="trailing" id="n8R-8X-yyy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings_icon" id="naU-6N-BWv">
+                        <inset key="imageInsets" minX="9" minY="-1" maxX="9" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="1"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cityPicker" destination="3hS-hy-qwB" id="i2n-V5-zbg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N28-or-4Mu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background1" width="842" height="1694"/>
+        <image name="settings_icon" width="50.5" height="50.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
